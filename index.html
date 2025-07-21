@@ -1,0 +1,347 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Priyanshu Yadav - Professional Resume</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <!-- Font Awesome for Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            /* Mimic LaTeX margins */
+            padding: 2cm; /* Approx 2cm top/bottom/left/right */
+            margin: 0;
+            box-sizing: border-box;
+            min-height: 100vh; /* Ensure body takes full height for positioning */
+            color: black; /* Default to black text */
+            background-color: white; /* Default to white background */
+        }
+
+        /* Custom styles for LaTeX-like layout */
+        .header-contact-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            align-items: center;
+            font-size: 0.85rem; /* Smaller font for contact details */
+            color: black; /* Always black for icons and text in header */
+        }
+        .header-contact-item {
+            display: inline-flex;
+            align-items: center;
+            margin: 0 0.5rem; /* Compact spacing */
+            white-space: nowrap;
+        }
+        .header-contact-item i {
+            margin-right: 0.2em; /* Smaller space for icon */
+            color: black; /* Ensure icons are black */
+        }
+        .header-contact-item a {
+            color: black; /* Ensure links are black */
+            text-decoration: none; /* No underline by default */
+        }
+        .header-contact-item a:hover {
+            text-decoration: underline; /* Underline on hover */
+        }
+
+        .section-title-line {
+            border-bottom: 1.5px solid black; /* Thinner, black line */
+            padding-bottom: 0.2rem; /* Reduced padding */
+            margin-bottom: 0.7rem; /* Reduced margin */
+            font-size: 1.25rem; /* Smaller section title */
+            font-weight: bold;
+            color: black; /* Ensure section titles are black */
+        }
+
+        .two-column-entry {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            margin-bottom: 0.1rem; /* Very small space between entries */
+        }
+        .two-column-entry .left-content {
+            flex-grow: 1;
+        }
+        .two-column-entry .right-content {
+            flex-shrink: 0;
+            text-align: right;
+            margin-left: 1rem; /* Space between left and right content */
+            font-style: italic; /* Italicize right content */
+            color: black; /* Ensure dates are black */
+        }
+
+        .highlights {
+            list-style-type: disc;
+            margin-left: 1.2rem; /* Adjusted for tighter spacing */
+            padding-left: 0;
+            margin-top: 0.1rem; /* Reduced top margin */
+            margin-bottom: 0.3rem; /* Reduced bottom margin */
+            font-size: 0.95rem; /* Slightly smaller text for bullet points */
+            color: black; /* Ensure bullet points are black */
+        }
+        .highlights li {
+            margin-bottom: 0.1rem; /* Very small space between list items */
+        }
+        .highlights strong {
+            font-weight: 600; /* Slightly bolder for strong tags */
+        }
+
+        /* Remove default Tailwind card styling */
+        section, header {
+            background-color: transparent;
+            border: none;
+            box-shadow: none;
+            padding: 0; /* Remove padding */
+            margin-bottom: 1.5rem; /* Consistent spacing between sections */
+        }
+        header {
+            margin-bottom: 1.5rem; /* Space after header */
+            padding-bottom: 0; /* Remove padding */
+        }
+        main {
+            padding-top: 0.5rem; /* Small top padding for main content */
+        }
+
+        .last-updated {
+            position: absolute;
+            top: 1rem;
+            right: 2rem;
+            font-size: 0.75rem;
+            color: #6b7280; /* gray-500 */
+        }
+
+        /* Specific text color for main body text to be black */
+        .text-gray-700, .text-gray-600 {
+            color: black !important;
+        }
+        .text-indigo-600-light-mode {
+             color: black !important; /* Ensure links and sub-headings are black */
+        }
+        .text-indigo-700-light-mode {
+            color: black !important; /* Ensure main name and section titles are black */
+        }
+
+        /* Hide dark mode toggle for print (though it's removed now) */
+        @media print {
+            body {
+                background-color: white !important;
+                color: black !important;
+                padding: 2cm !important; /* Ensure print margins are consistent */
+            }
+            .text-gray-800, .text-gray-600, .text-gray-700,
+            .text-indigo-600-light-mode, .text-indigo-700-light-mode,
+            .two-column-entry .right-content, .highlights, .header-contact-item i, .header-contact-item a {
+                color: black !important;
+            }
+            .section-title-line {
+                border-color: black !important;
+            }
+        }
+    </style>
+</head>
+<body class="bg-gray-50 text-gray-800 relative">
+    <div class="container mx-auto max-w-4xl">
+        <!-- Last Updated Text -->
+        <div class="last-updated">
+            <p>Last updated in July 2025</p>
+        </div>
+
+        <!-- Dark Mode Toggle Button (Removed) -->
+
+        <header class="text-center mb-8">
+            <h1 class="text-4xl font-extrabold text-indigo-700-light-mode mb-2">Priyanshu Yadav</h1>
+            <p class="text-lg text-gray-600">Sophomore | Modern Web Developer | MERN Stack Enthusiast</p>
+            <div class="mt-4 header-contact-container">
+                <span class="header-contact-item"><i class="fas fa-map-marker-alt"></i>VIT Bhopal, MP</span>
+                <span class="header-contact-item"><a href="mailto:p.priyanshuspn@gmail.com"><i class="far fa-envelope"></i>p.priyanshuspn@gmail.com</a></span>
+                <span class="header-contact-item"><a href="tel:8127552554"><i class="fas fa-phone"></i>8127552554</a></span>
+                <span class="header-contact-item"><a href="https://www.linkedin.com/in/priyanshu-yadav-36933b309/" target="_blank"><i class="fab fa-linkedin-in"></i>priyanshu-yadav-36933b309</a></span>
+                <span class="header-contact-item"><a href="https://github.com/Priyanshu123a19" target="_blank"><i class="fab fa-github"></i>Priyanshu123a19</a></span>
+            </div>
+        </header>
+
+        <main class="space-y-6">
+            <!-- Summary/Professional Profile Section -->
+            <section>
+                <h2 class="section-title-line text-indigo-700-light-mode">Summary / Professional Profile</h2>
+                <p class="text-gray-700 leading-relaxed">
+                    A highly motivated sophomore at VIT Bhopal with hands-on experience in modern web development technologies, specializing in the **MERN stack** (MongoDB, Express.js, React.js, Node.js).
+                    Possesses a strong command of **Data Structures and Algorithms (DSA) in C++** and a keen ability to adapt to different technologies.
+                    Passionate about continuously learning and exploring new advancements in tech, currently working with **Next.js** for various projects.
+                </p>
+            </section>
+
+            <!-- Education Section -->
+            <section>
+                <h2 class="section-title-line text-indigo-700-light-mode">Education</h2>
+
+                <div class="mb-2">
+                    <div class="two-column-entry">
+                        <div class="left-content">
+                            <h3 class="font-semibold text-gray-800">Bachelor of Technology (B.Tech)</h3>
+                            <p class="text-indigo-600-light-mode">VIT Bhopal</p>
+                        </div>
+                        <div class="right-content text-indigo-600-light-mode">
+                            <p>Bhopal, MP</p>
+                            <p>Pursuing</p>
+                        </div>
+                    </div>
+                    <ul class="highlights text-gray-700">
+                        <li>Current CGPA: 8.97/10.0</li>
+                        <li>Relevant Coursework: Data Structures and Algorithms, Object-Oriented Programming, Web Development</li>
+                    </ul>
+                </div>
+
+                <div class="mb-2">
+                    <div class="two-column-entry">
+                        <div class="left-content">
+                            <h3 class="font-semibold text-gray-800">Class 12 - 87%</h3>
+                            <p class="text-indigo-600-light-mode">St. Paul's Inter College</p>
+                        </div>
+                        <div class="right-content text-indigo-600-light-mode">
+                            <p>Shahjahanpur</p>
+                            <p>Year of Completion</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div>
+                    <div class="two-column-entry">
+                        <div class="left-content">
+                            <h3 class="font-semibold text-gray-800">Class 10 - 90%</h3>
+                            <p class="text-indigo-600-light-mode">St. Paul's Inter College</p>
+                        </div>
+                        <div class="right-content text-indigo-600-light-mode">
+                            <p>Shahjahanpur</p>
+                            <p>Year of Completion</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Experience Section -->
+            <section>
+                <h2 class="section-title-line text-indigo-700-light-mode">Experience</h2>
+
+                <div class="mb-2">
+                    <div class="two-column-entry">
+                        <div class="left-content">
+                            <h3 class="font-semibold text-gray-800">Tech Team Member</h3>
+                            <p class="text-indigo-600-light-mode">SDC Club</p>
+                        </div>
+                        <div class="right-content text-indigo-600-light-mode">
+                            <p>VIT Bhopal</p>
+                            <p>Current</p>
+                        </div>
+                    </div>
+                    <ul class="highlights text-gray-700">
+                        <li><strong>Collaborating</strong> with the tech team to improve and maintain the official SDC club website.</li>
+                        <li><strong>Contributing</strong> to front-end and back-end development initiatives to enhance user experience and functionality.</li>
+                    </ul>
+                </div>
+
+                <div class="mb-2">
+                    <div class="two-column-entry">
+                        <div class="left-content">
+                            <h3 class="font-semibold text-gray-800">Tech Team Member</h3>
+                            <p class="text-indigo-600-light-mode">Anime Club</p>
+                        </div>
+                        <div class="right-content text-indigo-600-light-mode">
+                            <p>VIT Bhopal</p>
+                            <p>Current</p>
+                        </div>
+                    </div>
+                    <ul class="highlights text-gray-700">
+                        <li><strong>Developed</strong> the official Anime Club website for the college, utilizing modern web technologies (MERN stack, Tailwind CSS, Material UI).</li>
+                        <li><strong>Contributed</strong> to the club's digital presence and community engagement through web development.</li>
+                    </ul>
+                </div>
+
+                <div class="mb-2">
+                    <div class="two-column-entry">
+                        <div class="left-content">
+                            <h3 class="font-semibold text-gray-800">Google Crowdsource Influencer</h3>
+                            <p class="text-indigo-600-light-mode">VIT Bhopal</p>
+                        </div>
+                        <div class="right-content text-indigo-600-light-mode">
+                            <p>Current</p>
+                        </div>
+                    </div>
+                    <ul class="highlights text-gray-700">
+                        <li><strong>Promoted</strong> Google Crowdsource initiatives within the college community.</li>
+                        <li><strong>Engaged</strong> students in contributing to Google's AI and data improvement efforts.</li>
+                    </ul>
+                </div>
+            </section>
+
+            <!-- Projects Section -->
+            <section>
+                <h2 class="section-title-line text-indigo-700-light-mode">Projects</h2>
+
+                <div class="mb-2">
+                    <div class="two-column-entry">
+                        <div class="left-content">
+                            <h3 class="font-semibold text-gray-800">Full-Stack Language Exchange Platform</h3>
+                            <p class="text-indigo-600-light-mode">Technologies: MERN Stack, Stream API</p>
+                        </div>
+                        <div class="right-content text-indigo-600-light-mode">
+                            <a href="https://language-learning-platform-y09b.onrender.com" target="_blank" class="hover:underline">language-learning-platform-y09b.onrender.com</a>
+                        </div>
+                    </div>
+                    <ul class="highlights text-gray-700">
+                        <li><strong>Developed</strong> a comprehensive full-stack language exchange platform using the **MERN stack**.</li>
+                        <li><strong>Integrated</strong> modern web technologies and **Stream API** to ensure robust and fast chat and video calling functionalities.</li>
+                        <li><strong>Designed</strong> and <strong>implemented</strong> features for seamless user interaction and real-time communication.</li>
+                    </ul>
+                </div>
+
+                <div>
+                    <div class="two-column-entry">
+                        <div class="left-content">
+                            <h3 class="font-semibold text-gray-800">Anime Club Website</h3>
+                            <p class="text-indigo-600-light-mode">Technologies: MERN Stack, Tailwind CSS, Material UI</p>
+                        </div>
+                        <div class="right-content text-indigo-600-light-mode">
+                            <a href="https://anime-club-lovat.vercel.app" target="_blank" class="hover:underline">anime-club-lovat.vercel.app</a>
+                        </div>
+                    </div>
+                    <ul class="highlights text-gray-700">
+                        <li><strong>Built</strong> the official Anime Club website for the college, leveraging the **MERN stack** for full functionality.</li>
+                        <li><strong>Styled</strong> the user interface with **Tailwind CSS** and **Material UI** to create a modern and responsive design.</li>
+                    </ul>
+                </div>
+            </section>
+
+            <!-- Skills & Technologies Section -->
+            <section>
+                <h2 class="section-title-line text-indigo-700-light-mode">Skills & Technologies</h2>
+                <div class="grid grid-cols-1 gap-1 text-gray-700 text-sm">
+                    <p><strong>Programming Languages:</strong> JavaScript (ES6+), Python, Java, C++, HTML5, CSS3, SQL, TypeScript</p>
+                    <p><strong>Frameworks/Libraries:</strong> React.js, Node.js, Express.js, Next.js, Tailwind CSS, Material UI, **DaisyUI**, **Shadcn/UI**, Prismic, Redux</p>
+                    <p><strong>Databases:</strong> MongoDB, PostgreSQL</p>
+                    <p><strong>Concepts & Paradigms:</strong> Data Structures and Algorithms (DSA), MERN Stack, RESTful APIs, Stream API, UI/UX Design Principles</p>
+                    <p><strong>Tools & DevOps:</strong> Git, GitHub, VS Code, Cursor, Postman</p>
+                    <p><strong>Operating Systems:</strong> Windows, Linux</p>
+                    <p><strong>Soft Skills:</strong> Problem-Solving, Communication, Teamwork, Leadership, Adaptability, Critical Thinking, Project Management</p>
+                </div>
+            </section>
+
+            <!-- Awards & Certifications Section -->
+            <section>
+                <h2 class="section-title-line text-indigo-700-light-mode">Awards & Certifications</h2>
+                <ul class="highlights text-gray-700">
+                    <li>NPTEL Machine Learning (<a href="https://drive.google.com/file/d/1_8sTv9eubHfZfu7OYyJjqvI3Y4fZ7kvY/view?usp=sharing" target="_blank" class="hover:underline">Certificate</a>) (NPTEL, Year of Completion)</li>
+                    <li>IBM Generative AI (<a href="https://drive.google.com/file/d/1lWVCKkQnzCj7C7WkfAVJjAUUf_H-5ENx/view?usp=sharing" target="_blank" class="hover:underline">Certificate</a>) (Adroit, Year of Completion)</li>
+                </ul>
+            </section>
+        </main>
+
+        <footer class="text-center mt-8 p-4 text-gray-600 text-sm">
+            <p>&copy; 2025 Priyanshu Yadav. All rights reserved.</p>
+        </footer>
+    </div>
+</body>
+</html>
